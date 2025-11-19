@@ -13,7 +13,7 @@ export const connectDB = async (): Promise<void> => {
       "⚠️  Server will start but database operations will fail until MongoDB is connected."
     );
     console.warn(
-      "💡 Make sure MongoDB is running or update MONGODB_URI in db.env"
+      "💡 Make sure MongoDB is running or update MONGODB_URI in .env"
     );
     // Don't exit - allow server to start for better debugging
   }
