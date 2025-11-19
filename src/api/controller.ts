@@ -45,7 +45,7 @@ export const getMovieById = async (
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
     res.status(500).json({
-      message: "Error fetching movie",
+      message: "Invalid ID",
       error: errorMessage,
     });
   }
@@ -65,7 +65,7 @@ export const createMovie = async (
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
     res.status(400).json({
-      message: "Error creating movie",
+      message: "Invalid request body",
       error: errorMessage,
     });
   }
@@ -92,7 +92,7 @@ export const updateMovie = async (
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
     res.status(400).json({
-      message: "Error updating movie",
+      message: "Invalid request body",
       error: errorMessage,
     });
   }
@@ -117,7 +117,7 @@ export const deleteMovie = async (
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
     res.status(500).json({
-      message: "Error deleting movie",
+      message: "Invalid ID",
       error: errorMessage,
     });
   }
